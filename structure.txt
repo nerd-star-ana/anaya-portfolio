@@ -1,0 +1,22 @@
+﻿anaya-portfolio
+├── public
+│   └── index.html
+├── src
+│   ├── components
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Leadership.jsx
+│   │   ├── MUN.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   └── Skills.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── index.jsx
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+└── tailwind.config.js
