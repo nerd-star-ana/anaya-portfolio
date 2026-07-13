@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,11 +15,33 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-  };
+  e.preventDefault();
+
+  emailjs
+    .send(
+      "service_0wf66cw",
+      "template_poqeflr",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "Cp3Tdn0Kr-pncxzPP"
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message.");
+    });
+};
 
   const socials = [
     { 
