@@ -14,6 +14,8 @@
     amanat: 'https://amanatpos.vercel.app/login',
     lovemystyle: 'https://lovemystyle.com.pk/?srsltid=AfmBOop9gnNw7tESLk8DbWv-JcVSYEGobsIrEauuDs4V1P30hMpjW5x1',
     twincolony: 'https://twincolony.vercel.app/',
+    image: '/images/amanat.png'
+
   },
      {
   title: 'Male Harassment Awareness Initiative',
@@ -41,6 +43,7 @@
           'Created promotional and marketing graphics for LoveMyStyle fashion brand, maintaining brand consistency across platforms.',
         tech: ['Canva', 'Photoshop', 'Branding', 'Marketing Design'],
         link: 'https://lovemystyle.com.pk/',
+         image: '/images/fashion.jpg',
       },
       {
     title: 'Photography Portfolio',
@@ -54,6 +57,7 @@
       'Visual Storytelling'
     ],
     link: '/pdfs/Photography Portfolio.pdf',
+    image: '/images/nature.png'
   },
       {
     title: 'APSIS MUN Society Leadership',
@@ -68,6 +72,7 @@
       'Mentorship'
     ],
     instagram: 'https://www.instagram.com/ams._fort/',
+    image:'/images/ams.jpg'
   }
 
     ];

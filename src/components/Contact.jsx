@@ -24,17 +24,17 @@ export default function Contact() {
     { 
       icon: '📧',
       label: 'Email', 
-      href: 'mailto:your@email.com' 
+      href: 'mailto:anayawais@gmail.com' 
     },
     { 
       icon: '💼',
       label: 'LinkedIn', 
-      href: 'https://linkedin.com' 
+      href: 'https://www.linkedin.com/in/anaya-awais-6667191a7/' 
     },
     { 
       icon: '📸',
       label: 'Instagram', 
-      href: 'https://instagram.com' 
+      href: 'https://instagram.com/anaya.awais_' 
     },
   ];
 

@@ -12,17 +12,16 @@ export default function MUN() {
     
   ];
 
-  const skills = [
-    'Position Papers',
-    'Draft Resolutions',
-,
-    'Working Papers',
-    'Crisis Management',
-    'Public Speaking',
-    'Research & Analysis',
-    'Negotiation',
-    'Conflict Resolution',
-  ];
+ const skills = [
+  'Position Papers',
+  'Draft Resolutions',
+  'Working Papers',
+  'Crisis Management',
+  'Public Speaking',
+  'Research & Analysis',
+  'Negotiation',
+  'Conflict Resolution',
+];
 
   return (
     <section id="mun" className="py-20 px-4 sm:px-6 lg:px-8">
