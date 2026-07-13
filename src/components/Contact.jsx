@@ -8,7 +8,7 @@ export default function Contact() {
     email: '',
     message: '',
   });
-
+const [status, setStatus] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -28,19 +28,19 @@ export default function Contact() {
       },
       "Cp3Tdn0Kr-pncxzPP"
     )
-    .then(() => {
-      alert("Message sent successfully!");
+   .then(() => {
+  setStatus("✅ Message sent successfully!");
 
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-    })
-    .catch((error) => {
-      console.error("EmailJS Error:", error);
-      alert("Failed to send message.");
-    });
+  setFormData({
+    name: "",
+    email: "",
+    message: "",
+  });
+})
+.catch((error) => {
+  console.error("EmailJS Error:", error);
+  setStatus("❌ Failed to send message. Please try again.");
+});
 };
 
   const socials = [
@@ -101,25 +101,31 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-white font-semibold mb-2">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
-                placeholder="Your message here..."
-                required
-              ></textarea>
-            </div>
+  <label className="block text-white font-semibold mb-2">Message</label>
+  <textarea
+    name="message"
+    value={formData.message}
+    onChange={handleChange}
+    rows="5"
+    className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+    placeholder="Your message here..."
+    required
+  ></textarea>
+</div>
 
-            <button
-              type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 flex items-center justify-center gap-2"
-            >
-              Send Message
-              <Send className="w-4 h-4" />
-            </button>
+{status && (
+  <div className="text-center text-cyan-400 font-medium mb-4">
+    {status}
+  </div>
+)}
+
+<button
+  type="submit"
+  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 flex items-center justify-center gap-2"
+>
+  Send Message
+  <Send className="w-4 h-4" />
+</button>
           </form>
 
           {/* Contact Info */}
