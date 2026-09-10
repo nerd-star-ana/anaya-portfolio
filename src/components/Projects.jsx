@@ -55,7 +55,7 @@ export default function Projects() {
       ],
       link: 'https://store-engine-blush.vercel.app/login?callbackUrl=%2F',
       privateAccess: true,
-      image: '/images/store-engine.png',
+      image: '/images/storeengine.png',
     },
 
     {
@@ -89,7 +89,7 @@ export default function Projects() {
         'Corporate Website',
       ],
       link: 'https://www.steagle.pk/',
-      image: '/images/steagle.png',
+      image: '/images/st.png',
     },
 
     {
