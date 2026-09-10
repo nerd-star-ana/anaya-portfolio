@@ -1,16 +1,110 @@
 import React from 'react';
-import { ExternalLink, FileText } from 'lucide-react';
+import { ExternalLink, FileText, Lock } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
     {
+      title: 'Twin Colony Community Platform',
+      category: 'Web Development',
+      description:
+        'A community-focused web platform featuring skilled-person and professional directories alongside a local marketplace, designed to connect residents with services, opportunities, and one another.',
+      tech: [
+        'React',
+        'Tailwind CSS',
+        'JavaScript',
+        'UI/UX Design',
+        'Community Platform',
+        'Marketplace',
+      ],
+      link: 'https://twincolony.vercel.app/',
+      image: '/images/amanat.png',
+    },
+
+    {
+      title: 'Scalefire.io',
+      category: 'AI SaaS & Web Development',
+      description:
+        'An AI-powered ecommerce optimization platform designed to help online businesses improve profitability through intelligent pricing, advertising, traffic, conversion, and margin analysis.',
+      tech: [
+        'React',
+        'Next.js',
+        'Tailwind CSS',
+        'AI SaaS',
+        'Dashboard UI',
+        'Data Visualization',
+        'Ecommerce',
+      ],
+      link: 'https://scalefire.io/',
+      privateAccess: true,
+      image: '/images/scalefire.png',
+    },
+
+    {
+      title: 'Store Engine',
+      category: 'Headless CMS',
+      description:
+        'A headless content management and ecommerce platform that separates content management from the frontend, allowing structured data and products to be managed through a centralized backend.',
+      tech: [
+        'React',
+        'Next.js',
+        'Headless CMS',
+        'JavaScript',
+        'Ecommerce',
+        'API Integration',
+        'Dashboard UI',
+      ],
+      link: 'https://store-engine-blush.vercel.app/login?callbackUrl=%2F',
+      privateAccess: true,
+      image: '/images/store-engine.png',
+    },
+
+    {
+      title: 'MSEC – Renewables First',
+      category: 'Education & Web Development',
+      description:
+        'A digital platform developed for the Margalla School on Energy & Climate, supporting an educational and professional development program focused on energy transition, climate, leadership, and practical learning.',
+      tech: [
+        'Web Development',
+        'UI/UX Design',
+        'Education Platform',
+        'Responsive Design',
+        'Forms',
+        'User Management',
+      ],
+      link: 'https://msec.renewablesfirst.org/',
+      privateAccess: true,
+      image: '/images/msec.png',
+    },
+
+    {
+      title: 'ST EAGLE',
+      category: 'Industrial & B2B Web Development',
+      description:
+        'A modern corporate website for an industrial manufacturing business, designed to present its products, capabilities, and services through a professional B2B-focused digital experience.',
+      tech: [
+        'Web Development',
+        'UI/UX Design',
+        'B2B',
+        'Responsive Design',
+        'Corporate Website',
+      ],
+      link: 'https://www.steagle.pk/',
+      image: '/images/steagle.png',
+    },
+
+    {
       title: 'Web Development Portfolio',
       category: 'Web Development',
       description:
-        'A collection of responsive and business-focused web applications showcasing modern UI/UX and real-world solutions.',
-      tech: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design'],
+        'A collection of responsive and business-focused web applications showcasing modern UI/UX, frontend development, and real-world digital solutions.',
+      tech: [
+        'React',
+        'Tailwind CSS',
+        'JavaScript',
+        'Responsive Design',
+        'UI/UX',
+      ],
       lovemystyle: 'https://lovemystyle.com.pk/',
-      twincolony: 'https://twincolony.vercel.app/',
       image: '/images/amanat.png',
     },
 
@@ -45,7 +139,7 @@ export default function Projects() {
       title: 'BookStork Branding',
       category: 'Graphic Design',
       description:
-        'Designed visual identity and promotional graphics for BookStork reading platform including social media content.',
+        'Designed visual identity and promotional graphics for BookStork reading platform, including social media content and promotional materials.',
       tech: ['Photoshop', 'Canva', 'Branding', 'Social Media Design'],
       image: '/images/book.jpg',
       link: 'https://www.instagram.com/bookstroks.pk/',
@@ -55,7 +149,7 @@ export default function Projects() {
       title: 'Fashion Brand Graphics',
       category: 'Social Media Design',
       description:
-        'Created promotional and marketing graphics for LoveMyStyle fashion brand, maintaining brand consistency across platforms.',
+        'Created promotional and marketing graphics for LoveMyStyle fashion brand, maintaining brand consistency across digital platforms.',
       tech: ['Canva', 'Photoshop', 'Branding', 'Marketing Design'],
       link: 'https://lovemystyle.com.pk/',
       image: '/images/fashion.jpg',
@@ -65,7 +159,7 @@ export default function Projects() {
       title: 'Photography Portfolio',
       category: 'Photography & Visual Arts',
       description:
-        'A curated collection of photographs capturing landscapes, architecture, nature, and everyday moments, showcasing my eye for composition, lighting, and visual storytelling.',
+        'A curated collection of photographs capturing landscapes, architecture, nature, and everyday moments, showcasing composition, lighting, and visual storytelling.',
       tech: [
         'Photography',
         'Composition',
@@ -80,7 +174,7 @@ export default function Projects() {
       title: 'APSIS MUN Society Leadership',
       category: 'Leadership & Public Speaking',
       description:
-        'Serving as a Director at APSIS MUN Society, I mentor delegates, conduct training sessions, manage the society’s social media presence, and help students develop their public speaking, diplomacy, and research skills. Several delegates I coached have gone on to receive Best Delegate and other prestigious awards at MUN conferences.',
+        'Serving as a Director at APSIS MUN Society, mentoring delegates, conducting training sessions, managing social media, and helping students develop public speaking, diplomacy, and research skills.',
       tech: [
         'Leadership',
         'Public Speaking',
@@ -100,6 +194,7 @@ export default function Projects() {
     >
       <div className="max-w-7xl mx-auto">
 
+        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -108,18 +203,22 @@ export default function Projects() {
           </h2>
 
           <p className="text-slate-400 text-lg">
-            Web development, design, and advocacy work
+            Web development, SaaS, UI/UX, design, and real-world digital solutions
           </p>
         </div>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
+
           {projects.map((project, idx) => (
             <div
               key={idx}
               className="group rounded-xl border border-cyan-400/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50 overflow-hidden hover:border-cyan-400/40 transition-all hover:shadow-lg hover:shadow-cyan-500/10"
             >
 
+              {/* Project Image */}
               <div className="aspect-video overflow-hidden border-b border-cyan-400/10 bg-slate-800">
+
                 {project.image ? (
                   <img
                     src={project.image}
@@ -131,8 +230,10 @@ export default function Projects() {
                     No Image Available
                   </div>
                 )}
+
               </div>
 
+              {/* Project Content */}
               <div className="p-6">
 
                 <p className="text-cyan-400 text-sm font-semibold mb-2">
@@ -147,6 +248,7 @@ export default function Projects() {
                   {project.description}
                 </p>
 
+                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, i) => (
                     <span
@@ -158,7 +260,28 @@ export default function Projects() {
                   ))}
                 </div>
 
+                {/* Private Access Notice */}
+                {project.privateAccess && (
+                  <div className="flex items-center gap-2 text-xs text-slate-400 mb-5">
+                    <Lock className="w-4 h-4 text-cyan-400" />
+                    <span>Private demo access available</span>
+                  </div>
+                )}
+
+                {/* Links */}
                 <div className="flex flex-wrap gap-4">
+
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                    >
+                      View Project
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
 
                   {project.lovemystyle && (
                     <a
@@ -172,18 +295,6 @@ export default function Projects() {
                     </a>
                   )}
 
-                  {project.twincolony && (
-                    <a
-                      href={project.twincolony}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-                    >
-                      Twin Colony
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
-
                   {project.physicswithasim && (
                     <a
                       href={project.physicswithasim}
@@ -192,18 +303,6 @@ export default function Projects() {
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                     >
                       View Website
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
-
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
-                    >
-                      View Project
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   )}
@@ -245,11 +344,12 @@ export default function Projects() {
                   )}
 
                 </div>
+
               </div>
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );
